@@ -368,4 +368,12 @@ body {
     font-size: large; 
     
   }
+.container{
+      max-width: fit-content;
+      margin: auto;
+      justify-content: center;
+      /* align-content: center; */
+      align-items: center;
+  }
+  
   
