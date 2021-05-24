@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Love calculator</title>
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  
+    <header>
+      <div class="card w-50 m-auto text-center responsive">
+        <div class="card-header bg-warning text-white card"><b>Love Calculator</b> </div>
+        <div class="card-body">
+          <form action="" class="form-inline w-75 m-auto">
+            <div class="form-group">
+              <input type="text" class="form-control text-center" placeholder="Your Name" id="yname">
+            </div>
+            <div class="pl-4 pr-4">
+              <span>+</span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control text-center" placeholder="Lover Name" id="lname">
+            </div>
+          </form><br>
+          <div class="w-70 m-auto">
+            <button class="btn btn-warning w-50 " onclick="checklove()"> Calculate</button>
+          </div>
+          <br>
+          <div>
+            <input type="text" name="" placeholder="LOVE PERCENTAGE" class="form-control text-center w-25 m-auto"
+              id="lovevalue">
+          </div>
+        </div>
+      </div>
+    </header>
+  
+</body>
+<script>
+  function checklove() {
+
+    let yname = document.getElementById('yname').value;
+    let lname = document.getElementById('lname').value;
+
+    if (yname == "") {
+      alert('Enter your name');
+    } else if (yname.length < 3) {
+      alert('Minimun length of your name should be 3')
+    } else if (!isNaN(yname)) {
+      alert('Numbers are not allowed');
+    }
+
+    else if (lname == "") {
+      alert('Please enter your love name');
+    } else if (lname.length <= 2) {
+      alert('Minimun length of love name should be 3')
+    } else if (!isNaN(lname)) {
+      alert('Numbers are not allowed');
+    }
+    else {
+      var lovedata = Math.random() * 100;
+      lovedata = Math.floor(lovedata);
+      document.getElementById('lovevalue').value = lovedata + "%";
+
+    }
+
+  }
+</script>
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+
+</html>
